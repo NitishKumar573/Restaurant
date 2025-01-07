@@ -1,0 +1,111 @@
+@media only screen and (min-width:200px) and (max-width:575px){
+    .hell{
+        color: black;
+        display: none;
+
+    }
+    .water{
+        position: fixed;
+        right: 8px;
+        top: 25px;
+        font-size:20px ;
+        z-index: 2;
+    }
+    
+
+}
+@media only screen and (min-width:200px) and (max-width:575px){
+  .yetam{
+    z-index: 4;
+  }
+    .myth{
+      position: fixed;
+      right:169px;
+    }
+    .yeta{
+      display: none;
+    }
+    .whit{
+      font-size: 40px;
+    
+    }
+    .mob{
+      display: flex;
+      flex-direction: column-reverse;
+
+    }
+    .whi{
+      position: relative;
+      top:350px;
+
+    }
+    .whe{
+      position: relative;
+      top:-390px
+      
+    }
+    img{
+      height: 80vw !important;
+      width:325px;
+    
+    }
+    .food-item{
+      background: linear-gradient(to right,rgb(248,232,217),rgb(188, 37, 37));
+    
+    
+    }
+    
+  }
+  @media only screen and (min-width:575px) and (max-width:10000px){
+    .water{
+        display: none;
+    }
+    .wain{
+      height:400px ;
+      width: 500px;
+    }
+    #red{
+      position: relative;
+      top: 20px;
+    }
+    .food-item{
+      background: linear-gradient(to right,rgb(248,232,217),rgb(188, 37, 37));
+      height: 600px;
+    
+    
+    }
+    .fooder img{
+      height: 500px !important;
+      width: 500px;
+      
+    }
+
+  }
+  .item h3{
+    font-weight: 700;
+  }
+  
+  
+  @media only screen and (min-width:410px) and (max-width:575px){
+    .whi{
+      position: relative;
+      top:420px;
+
+    }
+    .whe{
+      position: relative;
+      top: -360px;
+      left:40px;
+      height: 400px !important;
+      width:80vw;
+      
+      
+    }
+    img{
+      height: 80vw !important;
+      width:325px;
+    
+    }
+    
+
+  }
