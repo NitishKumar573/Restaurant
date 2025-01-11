@@ -9,6 +9,10 @@ let reset=document.querySelector(".hell");
 let newbtn=document.querySelector(".box");
 let turnO=true;
 let count=0;
+
+    
+    
+
 boxes.forEach((box) => {
     box.addEventListener("click",()=>{
         if(turnO){
@@ -77,25 +81,32 @@ const draw=()=>{
 win=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[0,4,8],[1,4,7],[2,5,8],[2,4,6]]
 const showsWinner=(winner)=>{
     disable();
-    if (winner=="X"){
-        msg2.innerText=`Winner is ${m}`
-        msg1.classList.remove("hide")
+    if(m!==""){
+        if (winner=="X"){
+            msg2.innerText=`Winner is ${m}`
+            msg1.classList.remove("hide")
+        }
+        else{
+            msg2.innerText=`Winner is ${n}`
+            msg1.classList.remove("hide")
+    
+        }
+    
+    
+    
     }
-    else{
-        msg2.innerText=`Winner is ${n}`
+    if(m==null){
+        msg2.innerText=`Winner is ${winner}`
         msg1.classList.remove("hide")
 
-    }
-
-
-
+    }    
 }
 const checkWinner=()=>{
     for(let pattern of win){
         pos1 = boxes[pattern[0]].innerText;
         pos2 = boxes[pattern[1]].innerText;
         pos3 = boxes[pattern[2]].innerText;
-        if(pos1 != "" && pos2 != "" && pos3 != ""){
+        if(pos1!= "" && pos2!= "" && pos3 !=""){
             if (pos1===pos2 && pos2===pos3) {
                 showsWinner(pos1);
                 

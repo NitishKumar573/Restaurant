@@ -11,6 +11,9 @@
         font-size:20px ;
         z-index: 2;
     }
+    .main_slide2 h1{
+      font-size: 100px !important;
+    }
     
 
 }
@@ -54,6 +57,14 @@
     
     
     }
+    .main_slide2{
+      /*background: linear-gradient(to right,rgb(120, 207, 175),rgb(204, 223, 110));
+      height: 700px;
+      width: 100%;*/
+      text-align: center;
+    
+    
+    }
     
   }
   @media only screen and (min-width:575px) and (max-width:10000px){
@@ -79,6 +90,10 @@
       width: 500px;
       
     }
+    .jail{
+      position: relative;
+      top: 100px;
+    }
 
   }
   .item h3{
@@ -102,9 +117,14 @@
       
     }
     img{
-      height: 80vw !important;
-      width:325px;
+      height: 70vw !important;
+      width:350px;
     
+    }
+    .grey img{
+      height: 70vw !important;
+      width:400px;
+
     }
     
 
