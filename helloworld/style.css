@@ -1,0 +1,121 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:linear-gradient(to right,rgb(232, 102, 22),rgb(134, 192, 134));
+    /*text-align: center;*/
+}
+.yeta{
+    font-size: 70px;
+    text-align: center;
+}
+.container{
+    height: 300px;
+    width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.game{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    position: fixed;
+    top: 200px;
+    left: 80px;
+
+}
+.hello{
+    background-color:#ffffc7;
+    height:18vmin ;
+    width:18vmin ;
+    border-radius: 1.5rem;
+    font-size: 30px;
+    color: rgb(10, 126, 39);
+    
+    
+}
+.box{
+    margin-bottom: 10px;
+    position: relative;
+    left: 100px;
+    background-color:navajowhite;
+    
+
+
+}
+
+.hell{
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    background-color: black;
+    color: aliceblue;
+    position: relative;
+    top: 150px;
+    
+}
+.yellow{
+    background-color: #febd68;
+}
+.hide{
+    display: none;
+}
+.msg{
+    height: 150px;
+    width: 100%;
+    font-size: 30px;
+    color: aquamarine;
+    text-align: center;
+}
+.box{
+    height: 50px;
+    width: 120px;
+    position: relative;
+    left: -10px;
+}
+@media only screen and (min-width:976px) and (max-width:10000px){
+    .hello{
+        height: 130px;
+        width: 130px;
+    }
+    .game{
+        height: 440px;
+        width: 440px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap:5px;
+        position: fixed;
+        top: 200px;
+        left: 520px;
+    
+    }
+    .hell{
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        background-color: black;
+        color: aliceblue;
+        position: fixed;
+        top: 650px;
+        left: 720px;
+        height: 50px;
+        width: 100px;
+
+        
+
+}
+}
+.yet{
+    display: flex;
+    flex-direction: column;
+}
