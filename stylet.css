@@ -95,7 +95,6 @@ body {
   width: 190px;
   background-color:rgba(36,93,72,0.5);
   /*background-color: black;*/
-
   color: white;
   display: none;
   flex-direction: column;
@@ -163,7 +162,7 @@ main{
 }
 .red-btn{
   cursor: pointer;
-  width: 160px;
+  width: 200px;
   font-weight: bold;
   color: aliceblue;
   line-height: 40px;
@@ -241,6 +240,7 @@ img{
   height: 60px !important;
   width: 75px;
   border-radius: 8px;
+  border-radius: 30px;
 
 }
 .yet2{
@@ -258,4 +258,74 @@ img{
 .yet3{
   border-radius: 50%;
 }
+.whale{
+  background: linear-gradient(to right,rgb(248,232,217),rgb(188, 37, 37));
+  color: black;
 
+}
+.best{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yaun{
+  background: linear-gradient(to right,rgb(199, 238, 250),rgb(227, 194, 212));
+
+}
+.cont{
+  background-color: white;
+  border: 3px solid black;
+  height: 410px;
+  width: 240px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.cont2 img{
+  height: 180px !important;
+  width: 160px;
+  padding-top: 8px;
+  border-radius: 10px;
+}
+.price{
+  color: red;
+  font-weight: 900;
+}
+footer{
+  background-color: black;
+  color: white;
+}
+.ball ul li{
+  list-style: none;
+}
+.marh{
+  color: #F9E795;
+}
+.chef{
+  background: linear-gradient(to right,rgb(182, 213, 158),rgb(178, 236, 229));
+}
+.chef img{
+  border-radius: 20px;
+}
+.name{
+  display: flex;
+  padding-top: 15px;
+  margin: 0;
+}
+.name img{
+  height: 65px !important;
+  width: 75px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.name .yeto{
+  margin-left:13px;
+}
+.heighter{
+  background: linear-gradient(to right,rgb(206, 140, 130),rgb(230, 236, 167));
+
+}
+.hall{
+  color: #20948B;
+  font-weight: 900;
+}
