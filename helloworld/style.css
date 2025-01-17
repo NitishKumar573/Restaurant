@@ -27,7 +27,7 @@ body{
     justify-content: center;
     align-items: center;
     gap:5px;
-    position: fixed;
+    /*position: fixed;*/
     top: 200px;
     left: 80px;
 
@@ -59,7 +59,8 @@ body{
     background-color: black;
     color: aliceblue;
     position: relative;
-    top: 150px;
+    top: 50px;
+    height: 40px;
     
 }
 .yellow{
@@ -69,8 +70,8 @@ body{
     display: none;
 }
 .msg{
-    height: 150px;
-    width: 100%;
+    height: 120px;
+    width: 700px;
     font-size: 30px;
     color: aquamarine;
     text-align: center;
@@ -80,6 +81,41 @@ body{
     width: 120px;
     position: relative;
     left: -10px;
+}
+@media only screen and (min-width:200px) and (max-width:976px){
+    .hello{
+        background-color:#ffffc7;
+        height:80px ;
+        width:80px;
+        border-radius: 1.5rem;
+        font-size: 30px;
+        color: rgb(10, 126, 39);
+        /*position: fixed;*/
+        
+        
+    }
+    .game{
+        height: 300px;
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap:5px;
+        position: fixed;
+        top: 220px;
+        left: 80px;
+    
+    }
+    .container{
+        height: 400px;
+        width: 400px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+
 }
 @media only screen and (min-width:976px) and (max-width:10000px){
     .hello{

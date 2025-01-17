@@ -19,6 +19,9 @@
  
 
 }
+header{
+  box-shadow:0 2px 30px rgb(16, 2, 9) !important;
+}
 .hello ul li{
     color:black;
     font-weight: 700;
@@ -30,13 +33,15 @@ a{
     width: 100%;
     height: 80px;
     background-color: rgb(248,232,217);
+    box-shadow:0 2px 30px rgb(16, 2, 9) !important;
+
 }
 .hell{
     height: 20px;
 }
 .yes{
     background-color: rgb(248,232,217);
-    border: none;
+    border:none;
     
 }
 /* styles.css */
@@ -156,13 +161,16 @@ main{
   height: 350px;
 
 }
+.grey img{
+  box-shadow: 0 2px 15px rgb(18, 18, 1);
+}
 .wain{
   text-decoration: none;
 
 }
 .red-btn{
   cursor: pointer;
-  width: 200px;
+  width: 220px;
   font-weight: bold;
   color: aliceblue;
   line-height: 40px;
@@ -170,7 +178,7 @@ main{
   font-size: 20px;
   padding: 10px;
   border-radius: 10px;
-  box-shadow:0 2px 15px rgb(253,77,8);
+  box-shadow:0 2px 15px rgb(163, 98, 72);
 
 
 
@@ -193,6 +201,17 @@ main{
 .food-item{
   background: linear-gradient(to right,rgb(248,232,217),rgb(188, 37, 37));
 
+
+}
+.food-item img{
+  height: 350px !important;
+  width:350px !important;
+  border-radius: 14px;
+  box-shadow:0 2px 15px #29122b;
+
+}
+.food-item h3{
+  margin-top: 10px;
 
 }
 /*.img-fluid {
@@ -221,7 +240,7 @@ img{
 
 .main_slide2{
   /*background: linear-gradient(to right,rgb(120, 207, 175),rgb(204, 223, 110));*/
-  background: linear-gradient(to right,#0bbece,rgb(208, 203, 100));
+  background: linear-gradient(to right,#d8909a,rgb(211, 255, 179));
 
   /*height: 550px;
   width: 100%;*/
@@ -261,7 +280,11 @@ img{
 .whale{
   background: linear-gradient(to right,rgb(248,232,217),rgb(188, 37, 37));
   color: black;
+  /*box-shadow:0 2px 15px rgb(16, 2, 9) !important;*/
 
+}
+.whale img{
+  box-shadow:0 2px 15px rgb(16, 2, 9) !important;
 }
 .best{
   display: flex;
@@ -275,7 +298,7 @@ img{
 .cont{
   background-color: white;
   border: 3px solid black;
-  height: 410px;
+  height: 440px;
   width: 240px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -283,9 +306,12 @@ img{
 }
 .cont2 img{
   height: 180px !important;
-  width: 160px;
-  padding-top: 8px;
+  width: 170px;
+  padding-top: 0px;
+  margin-top: 10px;
   border-radius: 10px;
+  border-radius: 10px;
+  box-shadow:0 2px 14px rgb(12, 6, 4);
 }
 .price{
   color: red;
@@ -306,6 +332,9 @@ footer{
 }
 .chef img{
   border-radius: 20px;
+  width: 300px !important;
+  height: 300px !important;
+  box-shadow:0 2px 15px rgb(16, 2, 9);;
 }
 .name{
   display: flex;
@@ -328,4 +357,35 @@ footer{
 .hall{
   color: #20948B;
   font-weight: 900;
+}
+.heavt{
+  background: linear-gradient(to right,rgb(165, 226, 227),rgb(245, 218, 237));
+}
+.date{
+  color: #2F3C7E;
+}
+.writish{
+  height: 450px;
+  width: 250px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+.writish img{
+  height: 200px !important;
+  width:200px !important ;
+  box-shadow:0 2px 15px rgb(16, 2, 9);
+  margin-bottom: 10px;
+}
+.mouth{
+  background: linear-gradient(to right,rgb(111, 132, 132),rgb(245, 218, 237));
+
+}
+.restaur{
+  background: linear-gradient(to right,rgb(252, 164, 164),rgb(227, 244, 162));
+
+}
+.heavt img{
+  height: 340px !important;
+  width: 380px !important;
+  box-shadow:0 2px 15px rgb(16, 2, 9);
 }

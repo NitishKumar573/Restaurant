@@ -7,33 +7,131 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylet.css">
   <link rel="stylesheet" href="media.css">
+  <style>
+    body{
+        background: linear-gradient(to right,rgb(199, 238, 250),rgb(227, 194, 212)) !important;
+    }
+    textarea{
+      width: 80%;
+      height: 100px;
+    }
+    .guide{
+        font-weight: 900;
+        font-size: 50px;
+        color: red;
+        text-align: center;
+    }
+    input{
+        width: 90% !important;
+        height: 30px;
+        font-size: 20px;
+        padding: 0px;
+        margin: 0px;
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+    .hate h2{
+        font-size: 21px !important;
+    }
+    .heigh{
+        margin-top: 22px;
+        font-size: 20px;
+        height: 35px;
+        background-color:rgb(234, 120, 13);
+
+    }
+    .whide{
+        width: 100%;
+        height: 30px;
+        border: 2px ;
+        text-align: center;
+        display: none;
+
+        
+    }
+    .break{
+  width: 30% !important;
+  margin-left: 110px !important;
+}
+    @media only screen and (min-width:575px) and (max-width:10000px){
+        input{
+        width: 70%;
+        height: 30px;
+        font-size: 23px;
+        margin-left: 30px;
+
+    }
+    .hate h2{
+        margin-left: 30px;
+        font-size: 20px;
+        
+        
+}
+.break{
+  width: 30% !important;
+  margin-left: 530px !important;
+}
+
+}
+@media only screen and (min-width:200px) and (max-width:575px){
+
+
+}
+
+
+</style>
 </head>
 <header class="white">
-<h1 id="sign" class="text-center fs-1 px-5 my-3 fw-bolder text-danger">SIGN UP<br></h1>
+<h1 id="sign" class="text-center fs-1 px-5 my-3 fw-bolder text-danger">FEEDBACK<br></h1>
 </header>
 <main>
-<div></div>
-<label for="" class="fs-4 fs-lg-3 d-block">User Name<br></label>
-<input type="text" placeholder="" class=" tel" >
-<br>
+  <form name="submit-to-google-sheet">
+    <div class="hate row">  
+    <label><h2 class="text-center">Name</h2><br></label><input type="text" name="Name" placeholder="" required class="mx-3 mx-lg-5"><br>
+    <label><h2 class="mt-1 text-center">Phone Number</h2></label><input type="Number" name="Phone" required class="mx-3 mx-lg-5"><br>
+    <label><h2 class="mt-2 text-center me-4">Rating</h2></label><select name="Rating" class="mx-3 mx-lg-5 break">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select><br>
+    <label><h2 class="mt-3 text-center">Feedback</h2><textarea name="Feedback"></textarea>
+    <label></label><input type="submit" value="submit" class="heigh" id="telly" onclick=clickme()>
+    <br>
+    </div>
+    <span id="succes"></span>
+</form>
+<footer>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyT_B99vBBJNSpIQa9YXCBdqckxG7MtH4JePS2u6P2cAiuX9o5Ugb-vVWcFEInPk6MZ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    
+    doc=document.querySelector("#succes")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 
-<div></div>
-<label for="" class="fs-4 fs-lg-3 d-block">Email</label>
-<input type="email" placeholder="" class="tel  d-block">
-<br>
-<div></div>
-<label for="" class="fs-4 fs-lg-3 d-block">Mobile Number</label>
-<input type="tel" placeholder="" class=" d-block tel" required pattern="^[0-9]{10}$" class="tel" title="Please enter a 10-digit mobile number">
-<br>
-<label for="" class="fs-4 fs-lg-3 d-block">Password</label>
-<input type="password" placeholder="" class="tel  d-block">
-<br>
-<label for="" class="fs-4 fs-lg-3 d-block">Date of Birth</label>
 
-<input type="date" class ="tel  d-block"><br>
-<input class="fs-4 fs-lg-3 d-block myth" type="submit" class ="tel text-center">
-</main>
-<footer></footer>
+        .then(()=> {
+            doc.innerText="Form Submitted Succesfully"
+
+            form.reset();
+        })
+        .catch(()=>{
+            alert(" Sorry,Your Table is not Booked Successfully")
+
+        })
+
+        })
+
+
+        
+    
+  </script>
+</footer>
 <body>
   
 </body>
