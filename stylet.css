@@ -205,9 +205,9 @@ main{
 }
 .food-item img{
   height: 350px !important;
-  width:350px !important;
+  width:330px !important;
   border-radius: 14px;
-  box-shadow:0 2px 15px #29122b;
+  box-shadow:0 2px 15px #e84c44;
 
 }
 .food-item h3{

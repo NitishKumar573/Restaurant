@@ -14,10 +14,16 @@
     .main_slide2 h1{
       font-size: 100px !important;
     }
+    .whale{
+      width: 100% !important;
+    }
     
 
 }
 @media only screen and (min-width:200px) and (max-width:575px){
+  .heavy img{
+    width: 100% !important;
+  }
   .hello{
     height: 130px !important;
   }
