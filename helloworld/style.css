@@ -75,6 +75,9 @@ body{
         position: fixed;
         left: 100px;
     }
+    .yeta{
+        font-size: 55px;
+    }
     .hello{
         background-color:#ffffc7;
         height:80px ;
