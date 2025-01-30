@@ -318,6 +318,7 @@ img{
   border-radius: 10px;
   border-radius: 10px;
   box-shadow:0 2px 14px rgb(12, 6, 4);
+  /*mix-blend-mode: color-burn;*/
 }
 .price{
   color: red;
@@ -381,6 +382,7 @@ footer{
   width:200px !important ;
   box-shadow:0 2px 15px rgb(16, 2, 9);
   margin-bottom: 10px;
+  
 }
 .mouth{
   background: linear-gradient(to right,rgb(111, 132, 132),rgb(245, 218, 237));
