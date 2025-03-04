@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background:linear-gradient(to right,rgb(232, 102, 22),rgb(134, 192, 134));
+    background:linear-gradient(to right,rgb(240, 79, 79),rgb(235, 144, 208));
     /*text-align: center;*/
 }
 .yeta{
@@ -12,8 +12,8 @@ body{
     text-align: center;
 }
 .container{
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
 
     display: flex;
     justify-content: center;
@@ -34,8 +34,8 @@ body{
 }
 .hello{
     background-color:#ffffc7;
-    height:18vmin ;
-    width:18vmin ;
+    height:16vmin ;
+    width:16vmin ;
     border-radius: 1.5rem;
     font-size: 30px;
     color: rgb(10, 126, 39);
@@ -59,43 +59,106 @@ body{
     background-color: black;
     color: aliceblue;
     position: relative;
-    top: 150px;
+    top: 50px;
+    height: 40px;
     
 }
 .yellow{
-    background-color: #febd68;
+    background-color: #f7b969;
 }
 .hide{
-    display: none;
+    display:none;
 }
-.msg{
-    height: 150px;
-    width: 100%;
-    font-size: 30px;
-    color: aquamarine;
-    text-align: center;
-}
-.box{
-    height: 50px;
-    width: 120px;
-    position: relative;
-    left: -10px;
-}
-@media only screen and (min-width:976px) and (max-width:10000px){
-    .hello{
-        height: 130px;
-        width: 130px;
+
+@media only screen and (min-width:200px) and (max-width:976px){
+    .hide{
+        position: fixed;
+        left: 100px;
     }
+    .yeta{
+        font-size: 55px;
+    }
+    .hello{
+        background-color:#ffffc7;
+        height:80px ;
+        width:80px;
+        border-radius: 1.5rem;
+        font-size: 30px;
+        color: rgb(10, 126, 39);
+        /*position: fixed;*/
+        }
+        .msg-con{
+            position: fixed;
+            left: 140px;
+            color: aquamarine;
+        }
+        
+        .box{
+            height: 50px;
+            width: 200px;
+            position: fixed;
+            left: 120px;
+            top: 150px;
+        }
     .game{
-        height: 440px;
-        width: 440px;
+        height: 300px;
+        width: 300px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap:5px;
         position: fixed;
-        top: 200px;
+        top: 250px;
+        left: 80px;
+    
+    }
+    .container{
+        height: 400px;
+        width: 400px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+    .hell{
+        position: fixed;
+        top: 570px;
+        left: 180px;
+        height: 50px;
+        width: 100px;
+    }
+
+}
+@media only screen and (min-width:976px) and (max-width:10000px){
+    .hello{
+        height: 120px;
+        width: 120px;
+    }
+    .msg-con{
+        position: fixed;
+        left: 640px;
+        color: aquamarine;
+    }
+    
+    .box{
+        height: 60px;
+        width: 280px;
+        padding-bottom: 15px !important;
+        position: fixed;
+        left: 565px;
+        top: 150px;
+    }
+    .game{
+        height: 400px;
+        width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap:5px;
+        position: fixed;
+        top: 250px;
         left: 520px;
     
     }
@@ -107,13 +170,16 @@ body{
         color: aliceblue;
         position: fixed;
         top: 650px;
-        left: 720px;
+        left: 650px;
         height: 50px;
         width: 100px;
-
+    }
+    .hide{
+            position: fixed;
+            right: 1420px !important;   
+        }
         
 
-}
 }
 .yet{
     display: flex;

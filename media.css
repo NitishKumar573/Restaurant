@@ -14,10 +14,20 @@
     .main_slide2 h1{
       font-size: 100px !important;
     }
-    
+    /*.whale{
+      width: 100% !important;
+    }
+    */
 
 }
 @media only screen and (min-width:200px) and (max-width:575px){
+  .heavy img{
+    width: 93% !important;
+    
+  }
+ .heavy{
+  text-align: center !important;
+ }
   .hello{
     height: 130px !important;
   }
@@ -42,12 +52,13 @@
     }
     .whi{
       position: relative;
-      top:350px;
+      top: 400px;
 
     }
     .whe{
       position: relative;
-      top:-390px
+      top:-390px;
+      height: 450px;
       
     }
     img{
@@ -80,17 +91,23 @@
   }
     
   
-  @media only screen and (min-width:575px) and (max-width:10000px){
+  @media only screen and (min-width:576px) and (max-width:10000px){
+    .heavt img {
+      height: 350px !important;
+      width: 92% !important;
+      box-shadow: 0 2px 15px rgb(16, 2, 9);
+    }
     .water{
         display: none;
     }
     .wain{
       height:400px ;
       width: 500px;
+      text-align: center !important;
     }
     #red{
       position: relative;
-      top: 20px;
+      top: 0px;
     }
     .food-item{
       background: linear-gradient(to right,rgb(248,232,217),rgb(188, 37, 37));
@@ -108,12 +125,17 @@
       top: 100px;
     }
     .heavy{
-      width: 100%;
+      width: 97%;
       height: 700px;
+      margin-left: 20px !important;
     }
     .heavy img{
       width: 100%;
       height: 700px !important;
+      
+    }
+    .whale{
+      width: 100%;
     }
     .cont{
       background-color: white;
@@ -127,31 +149,51 @@
     .cont2 img{
       height: 190px !important;
       width: 170px;
-      padding-top: 8px;
+      margin-top: 18px;
       border-radius: 15px;
     }
     .chef img{
       border-radius: 10px;
-      height: 405px !important;
-      width: 380px;
+      height: 330px !important;
+      width: 340px;
+    }
+    .doll{
+      margin-top: 60px !important;
+  
     }
   }
   .item h3{
     font-weight: 700;
   }
-  
+  @media only screen and (min-width:576px) and (max-width:975px){
+      
+        .widt{
+        width: 100%;
+    }
+    .water{
+      display: flex;
+      position: fixed;
+      z-index: 2;
+      right: 8px;
+      top: 25px;
+      font-size:20px ;
+      z-index: 2;
+  }
+
+  }
   
   @media only screen and (min-width:410px) and (max-width:575px){
     .whi{
       position: relative;
-      top:420px;
+      top:410px;
+
 
     }
     .whe{
       position: relative;
       top: -360px;
       left:40px;
-      height: 400px !important;
+      height: 450px !important;
       width:80vw;
       
       
@@ -164,6 +206,7 @@
     .grey img{
       height: 70vw !important;
       width:400px;
+      margin-top: 25px;
 
     }
     
