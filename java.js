@@ -1,3 +1,4 @@
+
 const searchIcon = document.querySelector(".search-icon");
 const searchContainer = document.querySelector(".search-container");
 

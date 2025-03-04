@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-gap: 10px;
+            display: none;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            background-size: cover;
+            background-image: url('images/back.jpg');
+        }
+        .flipped {
+            background-color: #2ecc71;
+        }
+        #timer {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #start-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button id="start-btn">Start Game</button>
+    <div id="timer">Time Left: 30s</div>
+    <div class="game-container" id="game-board"></div>
+    
+    <script>
+        const animalsArray = ['lion', 'tiger', 'elephant', 'giraffe', 'zebra', 'monkey', 'bear', 'panda'];
+        let cards = [...animalsArray, ...animalsArray];
+        cards = cards.sort(() => Math.random() - 0.5);
+
+        const gameBoard = document.getElementById("game-board");
+        const startBtn = document.getElementById("start-btn");
+        let firstCard = null;
+        let secondCard = null;
+        let lockBoard = false;
+        let timeLeft = 30;
+        let timer;
+        let gameStarted = false;
+
+        function createBoard() {
+            cards.forEach(animal => {
+                const card = document.createElement("div");
+                card.classList.add("card");
+                card.dataset.animal = animal;
+                card.addEventListener("click", startGame);
+                gameBoard.appendChild(card);
+            });
+        }
+
+        function startGame() {
+            if (!gameStarted) {
+                gameStarted = true;
+                startBtn.style.display = 'none';
+                gameBoard.style.display = 'grid';
+                document.querySelectorAll('.card').forEach(card => {
+                    card.style.backgroundImage = "url('images/back.jpg')";
+                    card.addEventListener("click", flipCard);
+                });
+                startTimer();
+            }
+        }
+
+        function flipCard() {
+            if (lockBoard) return;
+            if (this === firstCard) return;
+
+            this.style.backgroundImage = "url('images/" + this.dataset.animal + ".jpg')";
+            this.classList.add("flipped");
+
+            if (!firstCard) {
+                firstCard = this;
+                return;
+            }
+            
+            secondCard = this;
+            lockBoard = true;
+
+            checkMatch();
+        }
+
+        function checkMatch() {
+            if (firstCard.dataset.animal === secondCard.dataset.animal) {
+                resetBoard();
+            } else {
+                setTimeout(() => {
+                    firstCard.style.backgroundImage = "url('dog.jpeg')";
+                    secondCard.style.backgroundImage = "url('images/back.jpg')";
+                    firstCard.classList.remove("flipped");
+                    secondCard.classList.remove("flipped");
+                    resetBoard();
+                }, 1000);
+            }
+        }
+
+        function resetBoard() {
+            firstCard = null;
+            secondCard = null;
+            lockBoard = false;
+        }
+
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById("timer").textContent = "Time Left: " + timeLeft + "s";
+                if (timeLeft === 0) {
+                    clearInterval(timer);
+                    alert("Time's up! Game Over!");
+                    location.reload();
+                }
+            }, 1000);
+        }
+
+        startBtn.addEventListener("click", startGame);
+        createBoard();
+    </script>
+</body>
+</html>

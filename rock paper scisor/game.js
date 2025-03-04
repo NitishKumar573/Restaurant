@@ -11,6 +11,8 @@ const btn=document.querySelector(".btn");
 const resbtn=document.querySelector(".res-btn");
 let uscore=0;
 let cscore=0;
+
+
 const compchoice=()=>{
    const choice=["rock","paper","scissor"];
    const randInx=Math.floor(Math.random()*3)
@@ -89,3 +91,7 @@ dale.forEach((choice) => {
     }) 
     
 });
+
+    
+
+
