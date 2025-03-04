@@ -1,4 +1,15 @@
+<?php
+$servername = "127.0.0.2";
+$username = "root";
+$password = "Nitish123@";
+$database = "loginpage";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+/*include("login/index.php");
+echo $username;
+echo $password;*/
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -136,6 +147,7 @@
             
         </div>
     </header>
+    <a href="notes.php" id="note">INotes</a>
     <div class="whale">
         <div class="row p-3">
             <div class="carousel slide col-lg-9" data-bs-ride="carousel" id="slider1">
@@ -147,21 +159,21 @@
                 
                 <div class="carousel-inner d-lg-block heavy">
                     <div class="carousel-item active" id="slider1">
-                        <img src="/image/about-1.jpg" alt="...">
+                        <img src="./image/about-1.jpg" alt="...">
                         <div class="carousel-caption  d-lg-block">
                             <h5 class="fs-3 fw-bolder">Restaurant View</h5>
                             <p class="fs-4 fw-normal">Our Restuarant is so much Neat and clean and we provide you lot of facilities.</p>
                         </div>
                     </div>
                     <div class="carousel-item" id="slider1">
-                        <img src="/image/abtsec23.jpg" alt="...">
+                        <img src="./image/abtsec23.jpg" alt="...">
                         <div class="carousel-caption  d-lg-block ">
                             <h5 class="fs-3 fw-bolder">Customer View</h5>
                             <p class="fs-4 fw-normal">We always give respect to our customer and talk politiely.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="/image/about-4.jpg" alt="...">
+                        <img src="./image/about-4.jpg" alt="...">
                         <div class="carousel-caption  d-lg-block">
                             <h5 class="fs-3 fw-bolder">Starter</h5>
                             <p class="fs-4 fw-normal">It is our most Famous starter of us and most people like it.</p>
@@ -240,27 +252,27 @@
             
             <div class="row">
                 <div class="col-lg-7 col-12 fooder">
-                    <img src="image/img9.png" alt="">
+                    <img src="./image/img9.png" alt="">
                 </div>
                 <div class="col-lg-5 col-12 brot">
                     
                     <div class="mt-4 jail">
                         <div class="yet-2 mb-5">
                             <div class="yet1">
-                                <img src="/image/img1.png" class="yet3 img-fluid mb-1">
+                                <img src="./image/img1.png" class="yet3 img-fluid mb-1">
                                 
                             </div >
                             <h2 class="d-inline fs-5 fw-bold"><pre class="d-inline fs-5 fw-bold">Give You Tasty & Delicus Food </pre></h2>
                         </div >
                         <div class="yet-2 mb-5">
                             <div class="yet1">
-                                <img src="/image/img4.png" class="yet3 img-fluid">
+                                <img src="./image/img4.png" class="yet3 img-fluid">
                             </div>
                             <h2 class="d-inline fs-5 fw-bold"><pre class="d-inline fs-5 fw-bold">Alawys Respect Our Customer  </pre></h2>
                         </div>
                         <div class="yet-2 mb-5">
                             <div class="yet1">
-                                <img src="/image/img3.png" class="yet3 img-fluid">
+                                <img src="./image/img3.png" class="yet3 img-fluid">
                             </div>
                             <h2 class="d-inline fs-5 fw-bold jai"><pre class="d-inline fs-5 fw-bold">Take Care of Cleaness        </pre> </h2>
                             </div>
@@ -278,7 +290,7 @@
     
                 <div class="cont">
                     <div class="cont2">
-                        <img src="/image/menu-pizza.jpg" class="img-fluid"> 
+                        <img src="./image/menu-pizza.jpg" class="img-fluid"> 
                     </div>
                     <h3 class="fw-bolder mt-2">Pizza</h3>
                     <p>A crispy, thin crust topped with rich tomato sauce, melted cheese, and fresh toppings, baked to perfection for every bite.</p>
@@ -289,7 +301,7 @@
     
                 <div class="cont">
                     <div class="cont2">
-                        <img src="/image/chicken.jpg" class="img-fluid"> 
+                        <img src="./image/chicken.jpg" class="img-fluid"> 
                     </div>
                     <h3 class="fw-bolder mt-2">Chicken Loolipop</h3>
                     <p>Tender, marinated chicken wings fried until crispy, served with tangy dipping sauce for a flavorful, spicy snack or appetizer.</p>
@@ -300,7 +312,7 @@
     
                 <div class="cont">
                     <div class="cont2">
-                        <img src="/image/menu1.jpg" class="img-fluid"> 
+                        <img src="./image/menu1.jpg" class="img-fluid"> 
                     </div>
                     <h3 class="fw-bolder mt-2">Ice Cream</h3>
                     <p>Creamy, smooth ice cream available in multiple flavors, from classic vanilla to exotic options, offering a refreshing sweet treat.</p>
@@ -311,7 +323,7 @@
     
                 <div class="cont">
                     <div class="cont2">
-                        <img src="/image/menu-platter.jpg" class="img-fluid"> 
+                        <img src="./image/menu-platter.jpg" class="img-fluid"> 
                     </div>
                     <h3 class="fw-bolder mt-2">Platter</h3>
                     <p>A delightful assortment of our best dishes, served together for a perfect sharing experience, showcasing a variety of sweet flavors.</p>
@@ -439,7 +451,7 @@
             <h1 class="fw-bolder date pt-3">OUR FAMOUS EVENT</h1>
             <div class="row">
                 <div class="col-lg-6 col-12">
-                    <img src="/image/DALL·E 2025-01-13 20.34.00 - A warm and inviting restaurant setting with a festive atmosphere, featuring guests enjoying meals at decorated tables. A banner in the background read.webp" alt="" class="mt-4 mb-4">
+                    <img src="./image/DALL·E 2025-01-13 20.34.00 - A warm and inviting restaurant setting with a festive atmosphere, featuring guests enjoying meals at decorated tables. A banner in the background read.webp" alt="" class="mt-4 mb-4">
                 </div>
                 <div class="col-lg-6 col-12">
                     <h2 class="mt-2 fw-bold doll">Charity Day Celebration</h2>
@@ -452,7 +464,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 col-12">
-                    <img src="/image/DALL·E 2025-01-13 20.48.59 - A festive restaurant celebration for 'Khana Khajana' anniversary. The scene features a beautifully decorated dining area with golden balloons, string .webp" alt="" class="mt-4 mb-4">
+                    <img src="./image/DALL·E 2025-01-13 20.48.59 - A festive restaurant celebration for 'Khana Khajana' anniversary. The scene features a beautifully decorated dining area with golden balloons, string .webp" alt="" class="mt-4 mb-4">
                 </div>
                 <div class="col-lg-6 col-12">
                     <h2 class="mt-2 mt-lg-4 fw-bold doll">Celebrating Restaurant’s Anniversary!</h2>
@@ -465,7 +477,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 col-12">
-                    <img src="/image/DALL·E 2025-01-13 20.58.21 - A vibrant festive celebration at the restaurant 'Khana Khajana'. The scene shows a beautifully decorated dining area with colorful lights, traditional.webp" alt="" class="mt-4 mb-4">
+                    <img src="./image/DALL·E 2025-01-13 20.58.21 - A vibrant festive celebration at the restaurant 'Khana Khajana'. The scene shows a beautifully decorated dining area with colorful lights, traditional.webp" alt="" class="mt-4 mb-4">
                 </div>
                 <div class="col-lg-6 col-12">
                     <h2 class="mt-2 fw-bold doll">A Memorable Festive Feast at Khana Khajana</h2>
@@ -487,12 +499,12 @@
                 <p>Enjoy panoramic city vistas from our outdoor seating area, where the ambiance is enhanced by gentle breezes and the warm glow of sunset, creating a perfect dining atmosphere.</p>
             </div>
             <div class="writish mb-3 mt-3 col-lg-4 col-12 mx-5">
-                <img src="image/about-2.jpg" class="mt-3">
+                <img src="./image/about-2.jpg" class="mt-3">
                 <h2 class="mt-2 fw-bold ">Room-1 View</h2>
                 <p>Step into Room-1, featuring contemporary décor with floor-to-ceiling windows that offer serene garden views, providing a tranquil setting for an intimate and comfortable dining experience.</p>
             </div>
             <div class="writish mb-3 mt-3  col-lg-4 col-12 mx-5">
-                <img src="image/about-1.jpg" class="mt-3">
+                <img src="./image/about-1.jpg" class="mt-3">
                 <h2 class="mt-2 fw-bold ">Room-2 View</h2>
                 <p>Experience Room-2's modern design, complete with artistic wall murals and ambient lighting, complemented by views of our lush courtyard, making it ideal for both casual and special occasions.</p>
             </div>
@@ -538,6 +550,38 @@
         <h5 class="text-center">Location:Road No.5,Old Purlia Road,Mano,Jamshedpur</h5>
         <hr>
         <h3 class="text-center marh">Thank You for Visit</h3>
+        <script>
+            notes=document.getElementById("note");
+            <?php
+            $servername = "127.0.0.2";
+            $username = "root";
+            $password = "Nitish123@";
+            $database = "loginpage";
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $database);
+            /*$sql="SELECT * FROM `login` WHERE `name`='Manish',`password`='Manish123@'";
+            $result=mysqli_query($conn,$sql);
+            include("login/index.php");
+            if($result){
+                "notes.display=block";
+
+            }
+            else{
+                "notes.display=none";
+
+            }*/
+            include("login/index.php");
+            if($username=="Manish"){
+                "notes.style.display='block'";
+
+            }
+            else{
+                "notes.style.display='none'";
+
+            }
+
+            ?>
+        </script>
 
     </footer>
 </body>

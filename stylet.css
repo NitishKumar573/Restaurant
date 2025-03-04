@@ -3,6 +3,9 @@
     margin: 0;
 
 }
+body{
+  background-color: red;;
+}
 .hello{
     display: flex;
     justify-content: center;
@@ -20,8 +23,11 @@
  
 
 }
+  
+
 header{
   box-shadow:0 2px 30px rgb(16, 2, 9) !important;
+  /*position: fixed !important;*/
 }
 .hello ul li{
     color:black;
@@ -29,6 +35,9 @@ header{
 }
 a{
     text-decoration: none;
+}
+.wanda{
+  background-color: rgb(248,232,217) !important;
 }
 .naap{
     width: 100%;
@@ -283,6 +292,7 @@ img{
 .whale{
   background: linear-gradient(to right,rgb(248,232,217),rgb(188, 37, 37));
   color: black;
+  /*margin-top: 30px;*/
   /*box-shadow:0 2px 15px rgb(16, 2, 9) !important;*/
 
 }

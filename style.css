@@ -1,0 +1,21 @@
+.content{
+    height: 550px;
+    width: 350px;
+}
+.content img{
+    height:250px !important;
+    width:100%;
+}
+.wite input{
+    width: 90% !important;
+}
+form input{
+    width: 90% !important;
+}
+#title{
+    width: 90% !important;
+}
+.dite{
+    margin-right: 30px !important;
+    background-color: rgb(181, 213, 242);
+  }

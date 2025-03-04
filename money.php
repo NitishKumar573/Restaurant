@@ -1,0 +1,725 @@
+<?php 
+session_start();
+?>
+
+
+<?php
+$servername = "127.0.0.2";
+$username = "root";
+$password = "Nitish123@";
+$database = "loginpage";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
+    header("location:index.php");
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khana Khajana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="stylet.css">
+    <link rel="stylesheet" href="media.css">
+    <style>
+        .hii {
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="eModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Home</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Formed:28th October,2024
+                    <BR>
+                    Founder:Manish Kumar
+                    <br>
+                    Most Famous Food:Briyani
+                    <hr>
+                    It has Happen 5 year to Open and we never get Criticised for the taste of our food.We try to give
+                    service to our coustomer as much as possible
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="shadow-lg naap dilen">
+        <!--<div class="hello">-->
+
+        <div class="row hello px-lg-4">
+            <div class="col-lg-4 col-6 text-lg-start text-center">
+                <div>
+                    <button class="yes"><i class="fa-solid fa-burger fs-lg-1 fs-3"></i>
+                        <h2 class="fs-5 fw-bolder">KHANA KHAZANA</h2>
+                    </button>
+                    <i onclick=openSide() class="fa-solid fa-bars water "></i>
+                </div>
+            </div>
+            <div class="col-lg-4  text-center my-4 hell">
+                <div class="row">
+                    <ul class="col-3">
+                        <a href="#">
+                            <li data-bs-toggle="modal" data-bs-target="#eModal">Home</li>
+                        </a>
+                    </ul>
+                    <ul class="col-3">
+                        <a href="#menu">
+                            <li>Menu</li>
+                        </a>
+                    </ul>
+                    <ul class="col-3 ">
+                        <a href="#contact">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                    <ul class="col-3">
+                        <a href="option.html">
+                            <li>Games</li>
+                        </a>
+                    </ul>
+                    <ul class="col-3">
+                        <a href="logout.php">
+                            <li>logout</li>
+                        </a>
+                    </ul>
+                    <ul class="col-3">
+                        <a href="notes.php">
+                            <li>I-Note</li>
+                        </a>
+                    </ul>
+                    <ul class="col-3">
+                        <a href="indexing.php.php">
+                            <li>I-Discuss</li>
+                        </a>
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-6 yeta my-4">
+                <i data-bs-toggle="modal" data-bs-target="#eModal" class="fa-solid fa-house px-2"></i>
+                <a href="signup.html"> <i class="fa-solid fa-comment hii"></i></i></a>
+                <div class="search-container d-inline ">
+                    <i class="fa-solid fa-magnifying-glass px-3 search-icon" id="hello"></i>
+                    <input type="text" class="search-bar" placeholder="Search...">
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+        </div>
+        <div class="yetam">
+            <ul>
+                <a href="">
+                    <li onclick=closeSide()><i class="fa-solid fa-xmark"></i></li>
+                </a>
+            </ul>
+            <ul>
+                <a href="">
+                    <li data-bs-toggle="modal" data-bs-target="#eModal">Home</li>
+                </a>
+            </ul>
+            <ul>
+                <a href="#menu">
+                    <li>Menu</li>
+                </a>
+            </ul>
+            <ul>
+                <a href="option.html">
+                    <li>Games</li>
+                </a>
+            </ul>
+            <ul>
+                <a href="#contact">
+                    <li>Contact</li>
+                </a>
+            </ul>
+            <ul>
+                <a href="offer.html">
+                    <li>Offer</li>
+                </a>
+            </ul>
+            <ul>
+                <a href="signup.html">
+                    <li>Feedback</li>
+                </a>
+            </ul>
+            <ul>
+                <a href="logout.php">
+                    <li>logout</li>
+                </a>
+            </ul>
+            <ul>
+                <a href="notes.php">
+                    <li>I-Note</li>
+                </a>
+            </ul>
+            <ul>
+                <a href="indexing.php.php">
+                    <li>I-Discuss</li>
+                </a>
+            </ul>
+
+
+
+        </div>
+    </header>
+
+    <div class="whale mt-1">
+        <div class="row">
+            <div class="wanda text-center py-1 fs-3 fw-bold">
+                <?php
+                if (isset($_SESSION["user"])) {
+                    echo "Welcome to our Website " . $_SESSION["user"];
+                } else {
+                    echo "Welcome";
+                }
+                ?>
+
+
+                <br>
+
+
+            </div>
+            <div class="carousel slide col-lg-9 py-2" data-bs-ride="carousel" id="slider1">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#slider1" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#slider1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#slider1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner d-lg-block heavy">
+                    <div class="carousel-item active" id="slider1">
+                        <img src="./image/about-1.jpg" alt="...">
+                        <div class="carousel-caption  d-lg-block">
+                            <h5 class="fs-3 fw-bolder">Restaurant View</h5>
+                            <p class="fs-4 fw-normal">Our Restuarant is so much Neat and clean and we provide you lot of
+                                facilities.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="slider1">
+                        <img src="./image/abtsec23.jpg" alt="...">
+                        <div class="carousel-caption  d-lg-block ">
+                            <h5 class="fs-3 fw-bolder">Customer View</h5>
+                            <p class="fs-4 fw-normal">We always give respect to our customer and talk politiely.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/about-4.jpg" alt="...">
+                        <div class="carousel-caption  d-lg-block">
+                            <h5 class="fs-3 fw-bolder">Starter</h5>
+                            <p class="fs-4 fw-normal">It is our most Famous starter of us and most people like it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 container-fluid p-0 m-0 widt">
+                <h1 class="fw-bolde d-block mt-3 yesa text-center">ABOUT US</h1>
+                <p class="fiy">Khana Khazana is a culinary platform dedicated to bringing the rich and diverse flavors
+                    of Indian cuisine to food enthusiasts worldwide. Our mission is to share authentic recipes, cooking
+                    techniques, and cultural insights that celebrate India's gastronomic heritage. From traditional
+                    dishes to modern twists, we offer a wide array of recipes that cater to both novice and experienced
+                    cooks. Our team of passionate chefs and food writers is committed to providing detailed,
+                    easy-to-follow instructions, ensuring that every cooking experience is enjoyable and successful.
+                    Join us on a flavorful journey and discover the true essence of Indian cooking with Khana Khazana.
+                </p>
+            </div>
+        </div>
+    </div>
+    <main>
+
+
+
+
+        <div class="container-fluid  py-3 mob">
+            <div class="row grey">
+
+                <div class="col-lg-7 whi">
+                    <hl class=" text-center whit">Enjoy <span class="wait">Delicious <br>Food </span>In your <br>Health
+                        Life</hl>
+                    <p>Relish the goodness of our carefully crafted meals, designed to complement your journey to a
+                        healthier and more fulfilling life.Crafted with love, using fresh and high-quality natural
+                        ingredients.</p>
+                    <a href="book.html"><button class="red-btn p-1 blue">Book Your Table <i
+                                class="fa-solid fa-arrow-right"></i></button></a>
+                </div>
+                <div class="col-lg-5 whe gx-1">
+
+                    <img src="./image/water.jpg " class="img-fluid rounded float-start wain mt-5">
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+        <div class="row pt-3 pb-4 food-item">
+            <h1 class="fw-bolder fs-1" id="menu">MENUS</h1>
+            <div class="col-lg-4 col-12 mb-3 item">
+                <div>
+                    <img src="./image/Menu-item-3.jpg" alt="" class="img m-1">
+                </div>
+                <h3>Fried Potato</h3>
+                <p>Crispy golden potato fries, seasoned to perfection for a delightful crunch.
+
+                </p>
+                <a href="menu.html">
+                    <buttton class="white-btn">See Menu</buttton>
+                </a>
+
+            </div>
+            <div class="col-lg-4 col-12 item mb-2">
+
+                <div>
+                    <img src="image/Menu-item-2.jpg" alt="" class="img mt-3">
+                </div>
+                <h3>Salad</h3>
+                <p>A fresh mix of greens, vibrant veggies, and zesty dressing for a healthy bite.
+
+                </p>
+                <a href="menu.html">
+                    <buttton class="red-btn " id="red">See Menu</buttton>
+                </a>
+
+            </div>
+            <div class="col-lg-4 col-12 item mb-2">
+                <div>
+                    <img src="image/menu1.jpg" alt="" class="img-fluid img mt-3">
+                </div>
+                <h3>Ice Cream</h3>
+                <p>Creamy and luscious ice cream, available in a variety of irresistible flavors.
+
+                </p>
+                <a href="menu.html">
+                    <buttton class="white-btn">See Menu</buttton>
+                </a>
+
+            </div>
+
+
+        </div>
+        <div class="main_slide2 pt-4">
+            <hl class="fs-2 mb-5 fw-bolder hack">Why People Choose Us</hl>
+
+            <div class="row">
+                <div class="col-lg-7 col-12 fooder">
+                    <img src="image/img9.png" alt="">
+                </div>
+                <div class="col-lg-5 col-12 brot">
+
+                    <div class="mt-4 jail">
+                        <div class="yet-2 mb-5">
+                            <div class="yet1">
+                                <img src="./image/img1.png" class="yet3 img-fluid mb-1">
+
+                            </div>
+                            <h2 class="d-inline fs-5 fw-bold">
+                                <pre class="d-inline fs-5 fw-bold">Give You Tasty & Delicus Food </pre>
+                            </h2>
+                        </div>
+                        <div class="yet-2 mb-5">
+                            <div class="yet1">
+                                <img src="./image/img4.png" class="yet3 img-fluid">
+                            </div>
+                            <h2 class="d-inline fs-5 fw-bold">
+                                <pre class="d-inline fs-5 fw-bold">Alawys Respect Our Customer  </pre>
+                            </h2>
+                        </div>
+                        <div class="yet-2 mb-5">
+                            <div class="yet1">
+                                <img src="./image/img3.png" class="yet3 img-fluid">
+                            </div>
+                            <h2 class="d-inline fs-5 fw-bold jai">
+                                <pre class="d-inline fs-5 fw-bold">Take Care of Cleaness        </pre>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+        <div class="yaun pb-3">
+            <h1 class="fw-bolder pt-2">Our Popular Food</h1>
+            <div class="row">
+                <div class="best col-lg-3">
+
+                    <div class="cont">
+                        <div class="cont2">
+                            <img src="./image/menu-pizza.jpg" class="img-fluid">
+                        </div>
+                        <h3 class="fw-bolder mt-2">Pizza</h3>
+                        <p>A crispy, thin crust topped with rich tomato sauce, melted cheese, and fresh toppings, baked
+                            to perfection for every bite.</p>
+                        <p class="price">$4</p>
+                    </div>
+                </div>
+                <div class="best col-lg-3 ">
+
+                    <div class="cont">
+                        <div class="cont2">
+                            <img src="./image/chicken.jpg" class="img-fluid">
+                        </div>
+                        <h3 class="fw-bolder mt-2">Chicken Loolipop</h3>
+                        <p>Tender, marinated chicken wings fried until crispy, served with tangy dipping sauce for a
+                            flavorful, spicy snack or appetizer.</p>
+                        <p class="price">$3</p>
+                    </div>
+                </div>
+                <div class="best col-lg-3">
+
+                    <div class="cont">
+                        <div class="cont2">
+                            <img src="./image/menu1.jpg" class="img-fluid">
+                        </div>
+                        <h3 class="fw-bolder mt-2">Ice Cream</h3>
+                        <p>Creamy, smooth ice cream available in multiple flavors, from classic vanilla to exotic
+                            options, offering a refreshing sweet treat.</p>
+                        <p class="price">$1</p>
+                    </div>
+                </div>
+                <div class="best col-lg-3">
+
+                    <div class="cont">
+                        <div class="cont2">
+                            <img src="./image/menu-platter.jpg" class="img-fluid">
+                        </div>
+                        <h3 class="fw-bolder mt-2">Platter</h3>
+                        <p>A delightful assortment of our best dishes, served together for a perfect sharing experience,
+                            showcasing a variety of sweet flavors.</p>
+                        <p class="price">$2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chef">
+            <h1 class="fs-1 fw-bolder pt-2">Our Talented chef</h1>
+            <div class="row pt-2 pb-4">
+                <div class="col-lg-6 col-12">
+                    <img src="image/team-1.jpg">
+
+                </div>
+                <div class="col-lg-6 col-12">
+                    <p class="mt-3">
+                    <h1 class="fw-bold g1">Chef Alessandro</h1>
+                    Our head chef, Chef Alessandro, brings a unique international flair to Khana Khazana. With years of
+                    experience in top kitchens worldwide, Chef Alessandro is renowned for his expertise in creating the
+                    perfect Biryani and Chicken Lollipop. His dedication to blending traditional Indian spices with
+                    innovative techniques has earned him recognition as one of the finest chefs, bringing authentic yet
+                    modern flavors to every dish.
+                    </p>
+                </div>
+            </div>
+            <div class="row pt-2 pb-4">
+                <div class="col-lg-6 col-12">
+                    <img src="image/chef.png">
+
+                </div>
+                <div class="col-lg-6 col-12">
+                    <p class="mt-3">
+                    <h1 class="fw-bold g1">Chef Luca</h1>
+                    Our renowned chef, Chef Luca, is the culinary genius behind Khana Khazana's signature dishes.
+                    Specializing in crafting perfect Pizzas and flavorful Fried Rice, Chef Luca combines classic
+                    techniques with a creative touch. His years of experience and dedication to authentic cooking have
+                    earned him a reputation as one of the most famous chefs at Khana Khazana. With each dish, Chef Luca
+                    delivers an unforgettable dining experience filled with bold flavors and culinary expertise.
+                    </p>
+                </div>
+            </div>
+            <div class="row pt-2 pb-4">
+                <div class="col-lg-6 col-12">
+                    <img src="image/chef3.jpg">
+
+                </div>
+                <div class="col-lg-6 col-12">
+                    <p class="mt-3">
+                    <h1 class="fw-bold g1">Chef Marco</h1>
+                    Our celebrated chef, Chef Marco, is known for his exceptional skills in creating iconic dishes like
+                    Recheado Masala Fish and Kidney Bean Curry at Khana Khazana. With years of international experience,
+                    Chef Marco combines traditional Indian flavors with a global perspective. His expertise in balancing
+                    spices and creating rich, flavorful curries has made him one of the most famous chefs in our
+                    restaurant, offering a culinary experience that stands out.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row pt-2 pb-4">
+                <div class="col-lg-6 col-12">
+                    <img src="image/chef5.jpg">
+
+                </div>
+                <div class="col-lg-6 col-12 what">
+                    <p class="mt-3">
+                    <h1 class="fw-bold g1">Chef Isabella</h1>
+                    Our renowned chef, Chef Isabella, is the culinary mastermind behind some of Khana Khazana's most
+                    beloved dishes. Known for her expertise in preparing Lamb Rogan Josh and Paneer Butter Masala, Chef
+                    Isabella brings a perfect blend of traditional flavors and modern techniques to every dish. With her
+                    passion for cooking and years of experience, she has earned a well-deserved reputation as one of the
+                    finest chefs at Khana Khazana.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="heighter"></div>
+        <div class="container-fluid heighter">
+            <div class="container">
+                <h2 class="fs-1 fw-bolder pt-3 mb-2 hall">Some More About Us</h2>
+                <div class="row">
+                    <div class="accordion fw-normal" id="accordionExample">
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header ">
+                                <button class="accordion-button collapsed fw-bolder" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Will we Register on Zomato
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">We are thrilled to announce that we will soon be officially
+                                    registered with Zomato. This partnership will allow us to serve you better and
+                                    provide seamless access to exclusive deals and offers. Stay tuned for the official
+                                    launch, and thank you for your continued support as we take this exciting step
+                                    forward!
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bolder" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    What is our aim in comming five year
+                                </button>
+                            </h2>
+                            <div id="flush" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Over the next five years, our aim is to establish our
+                                    restaurant as a trusted name in the industry. We plan to expand our menu offerings,
+                                    enhance customer experiences, and integrate innovative online services. By focusing
+                                    on quality, consistency, and sustainability, we aim to attract a loyal customer base
+                                    and grow our presence both locally and beyond.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bolder" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush2" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Will we move on cattering
+                                </button>
+                            </h2>
+                            <div id="flush2" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Currently, we are focused on providing the best dine-in and
+                                    takeaway experiences for our customers. While we don’t offer catering services at
+                                    the moment, it’s something we may explore in the future as we grow. Stay connected
+                                    with us for updates on new services and offerings!
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bolder" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush1" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    More About the Developer
+                                </button>
+                            </h2>
+                            <div id="flush1" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Hello, my name is Nitish Kumar, and I am a Class 9 student
+                                    with a deep passion for Robotics, Artificial Intelligence, and Web Development. I
+                                    have hands-on experience in designing and programming robots, particularly using
+                                    Arduino UNO boards, as well as a solid foundation in Python programming and AI
+                                    principles. Additionally, I have explored both front-end and back-end web
+                                    development, with projects such as a restaurant website, a Tic Tac Toe game, and a
+                                    responsive clone of the Wscubetech website.Iam also an good chess player.
+
+                                    I have attended a Robotics and AI workshop, where I enhanced my skills in
+                                    problem-solving and creativity. My technical toolkit includes proficiency in Python,
+                                    HTML, CSS, JavaScript, and SQL, alongside tools like Git and Visual Studio Code.
+                                    With a strong inclination for problem-solving, teamwork, and innovation, I am always
+                                    eager to learn and embrace new challenges in technology.
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="heavt">
+            <div class="container ">
+                <h1 class="fw-bolder date pt-3">OUR FAMOUS EVENT</h1>
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <img src="./image/DALL·E 2025-01-13 20.34.00 - A warm and inviting restaurant setting with a festive atmosphere, featuring guests enjoying meals at decorated tables. A banner in the background read.webp"
+                            alt="" class="mt-4 mb-4">
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <h2 class="mt-2 fw-bold doll">Charity Day Celebration</h2>
+                        <p>On 3rd March, we proudly hosted Charity Day, bringing our community together for a meaningful
+                            cause. With every meal served, we contributed to Charity events to support local hunger
+                            relief initiatives". Guests enjoyed a special menu, live entertainment, and the joy of
+                            making a difference.
+
+                            We are thrilled to announce that, thanks to your support, we raised 40000, helping to create
+                            a positive impact. Khana Khajana, we’re committed to blending great food with giving back.
+                            Thank you for joining us in making a difference!
+
+                            Stay tuned for more events!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <img src="./image/DALL·E 2025-01-13 20.48.59 - A festive restaurant celebration for 'Khana Khajana' anniversary. The scene features a beautifully decorated dining area with golden balloons, string .webp"
+                            alt="" class="mt-4 mb-4">
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <h2 class="mt-2 mt-lg-4 fw-bold doll">Celebrating Restaurant’s Anniversary!</h2>
+                        <p class="">On 15 January, we marked a significant milestone – the 15th anniversary of Khana
+                            Khazana! This special day was a celebration of the incredible journey we’ve shared with our
+                            wonderful guests and community.
+
+                            The event featured a festive atmosphere with live music, exclusive dishes, and heartfelt
+                            moments as we reflected on the memories made over the years. We were delighted to welcome
+                            familiar faces and new ones, all coming together to honor our passion for exceptional food
+                            and hospitality.
+
+                            Thank you for making this celebration unforgettable. Here’s to many more years of delicious
+                            moments!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <img src="./image/DALL·E 2025-01-13 20.58.21 - A vibrant festive celebration at the restaurant 'Khana Khajana'. The scene shows a beautifully decorated dining area with colorful lights, traditional.webp"
+                            alt="" class="mt-4 mb-4">
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <h2 class="mt-2 fw-bold doll">A Memorable Festive Feast at Khana Khajana</h2>
+                        <p>On 31st October, Khana Khajana hosted an unforgettable Festive Feast in celebration of
+                            Diwali. The restaurant came alive with vibrant decorations, glowing lights, and the aroma of
+                            our signature dishes filling the air.
+
+                            Guests enjoyed a specially curated menu featuring Shahi Paneer, along with live music and
+                            cultural performances that added to the festive charm. Families and friends gathered to
+                            create lasting memories, making the celebration truly special.
+
+                            We are grateful to everyone who joined us and made the event a grand success. Stay tuned for
+                            more exciting celebrations at Khana Khajana!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="restaur pb-4">
+            <h1 class="pt-3 fw-bolder dell">Restaurant View</h1>
+            <div class="d-flex justify-content-center row">
+                <div class="writish mb-4 mt-3 col-lg-4 col-12 mx-5">
+                    <img src="image/DALL·E 2025-01-15 18.13.28 - A full view of a restaurant from the outside, featuring a stylish and inviting facade with large glass windows, warm ambient lighting, and a prominent.webp"
+                        class="mt-3">
+                    <h2 class="mt-2 fw-bold ">OUTER VIEW</h2>
+                    <p>Enjoy panoramic city vistas from our outdoor seating area, where the ambiance is enhanced by
+                        gentle breezes and the warm glow of sunset, creating a perfect dining atmosphere.</p>
+                </div>
+                <div class="writish mb-3 mt-3 col-lg-4 col-12 mx-5">
+                    <img src="image/about-2.jpg" class="mt-3">
+                    <h2 class="mt-2 fw-bold ">Room-1 View</h2>
+                    <p>Step into Room-1, featuring contemporary décor with floor-to-ceiling windows that offer serene
+                        garden views, providing a tranquil setting for an intimate and comfortable dining experience.
+                    </p>
+                </div>
+                <div class="writish mb-3 mt-3  col-lg-4 col-12 mx-5">
+                    <img src="image/about-1.jpg" class="mt-3">
+                    <h2 class="mt-2 fw-bold ">Room-2 View</h2>
+                    <p>Experience Room-2's modern design, complete with artistic wall murals and ambient lighting,
+                        complemented by views of our lush courtyard, making it ideal for both casual and special
+                        occasions.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
+        <script src="java.js"></script>
+
+        <div class="name">
+            <div>
+                <img src="image/nitish.jpg">
+            </div>
+            <div class="yeto">
+                <h2>Nitish Kumar</h2>
+                <p class="p-0">Website Developer</p>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid while">
+            <h2 id="contact" class="text-center">Contact</h2>
+            <div class="ball text-center ">
+                <ul class=" d-flex justify-content-center">
+                    <a href="">
+                        <li class="px-3 px-lg-5"><i class="fa-brands fa-facebook"></i></li>
+                    </a>
+                    <a href="">
+                        <li class="px-3 px-lg-5"><i class="fa-brands fa-twitter"></i></li>
+                    </a>
+                    <a href="https://www.instagram.com/khana_khajana_344/">
+                        <li class="px-3 px-lg-5"><i class="fa-brands fa-instagram"></i></li>
+                    </a>
+                    <a href="https://wa.me/6299520960">
+                        <li class="px-3 px-lg-5"><i class="fa-brands fa-whatsapp"></i></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <h6 class="text-center">We got an award from the MLA to be the cleanest Restaurant in the Cities</h4>
+            <hr>
+            <h5 class="text-center">Location:Road No.5,Old Purlia Road,Mano,Jamshedpur</h5>
+            <hr>
+            <h3 class="text-center marh">Thank You for Visit</h3>
+
+    </footer>
+</body>
+
+</html>

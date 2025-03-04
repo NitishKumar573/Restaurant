@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-gap: 10px;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .flipped {
+            background-color: #2ecc71;
+        }
+        .hile{
+            display: none;*
+            text-decoration: none;
+            position: relative;
+            /*top: 8008px;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container" id="game-board" ></div>
+    <img src="/image/African_Bush_Elephant.jpg" alt="" id="he1" class="hile">
+    <img src="/image/Cat03.jpg" alt="" id="he2" class="hile">
+    <img src="/image/cow.jpg" alt="" id="he3" class="hile">
+    <img src="/image/Giant-panda-cub-branch.webp" alt="" id="he4" class="hile">
+    <img src="/image/lion.jpg" alt="" id="he5" class="hile">
+    <img src="/image/liom.webp" alt="" id="he6" class="hile">
+    <img src="/image/Lime-butterfly-Papilio-demoleus-feeding-on-flower.webp" alt="" id="he7" class="hile">
+    <img src="/dog.jpeg" alt="" id="he8" class="hile">
+    <script>
+        h1=document.querySelector("#he1");
+        h2=document.querySelector("#he2");
+        h3=document.querySelector("#he3");
+        h4=document.querySelector("#he4");
+        h5=document.querySelector("#he5");
+        h6=document.querySelector("#he6");
+        h7=document.querySelector("#he7");
+        h8=document.querySelector("#he8");
+        
+        const cardsArray = [h1,h2,h3,h4,h5,h6,h7,h8];
+        let cards = [...cardsArray, ...cardsArray];
+        cards = cards.sort(() => Math.random() - 0.5);
+
+        const gameBoard = document.getElementById("game-board");
+        let firstCard = null;
+        let secondCard = null;
+        let lockBoard = false;
+
+        function createBoard() {
+            cards.forEach(symbol => {
+                const card = document.createElement("div");
+                card.classList.add("card");
+                card.dataset.symbol = symbol;
+                card.addEventListener("click", flipCard);
+                gameBoard.appendChild(card);
+            });
+        }
+
+        function flipCard() {
+            if (lockBoard) return;
+            if (this === firstCard) return;
+
+            this.textContent = this.dataset.symbol;
+            this.classList.add("flipped");
+
+            if (!firstCard) {
+                firstCard = this;
+                return;
+            }
+            
+            secondCard = this;
+            lockBoard = true;
+
+            checkMatch();
+        }
+
+        function checkMatch() {
+            if (firstCard.dataset.symbol === secondCard.dataset.symbol) {
+                resetBoard();
+            } else {
+                setTimeout(() => {
+                    firstCard.textContent = "";
+                    secondCard.textContent = "";
+                    firstCard.classList.remove("flipped");
+                    secondCard.classList.remove("flipped");
+                    resetBoard();
+                }, 1000);
+            }
+        }
+
+        function resetBoard() {
+            firstCard = null;
+            secondCard = null;
+            lockBoard = false;
+        }
+
+        createBoard();
+    </script>
+</body>
+</html>

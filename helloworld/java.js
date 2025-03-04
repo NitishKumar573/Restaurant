@@ -1,5 +1,4 @@
 
-
 m=prompt("Enter the Name of 1st Player:")
 n=prompt("Enter the Name of 2nd Player:")
 let boxes=document.querySelectorAll(".hello");
@@ -54,6 +53,8 @@ reset.addEventListener("click",()=>{
 
 })
 newbtn.addEventListener("click",()=>{
+    count=0;
+    turnO=false;
     enable()
     msg1.classList.add("hide")
 
@@ -95,7 +96,7 @@ const showsWinner=(winner)=>{
     
     
     }
-    if(m==null){
+    else{
         msg2.innerText=`Winner is ${winner}`
         msg1.classList.remove("hide")
 
@@ -118,4 +119,6 @@ const checkWinner=()=>{
 
     
         }
-    }
+    };
+
+    
